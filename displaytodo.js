@@ -1,7 +1,7 @@
 import listenToUpdates from "./listentoupdates.js";
 
 let data = [];
-const listsDom = document.querySelector(".todo-list");
+let listsDom = document.querySelector(".todo-list");
 
 export default function displayToDo() {
   let filter = document.querySelector("#completed").checked;
@@ -24,6 +24,8 @@ export default function displayToDo() {
 
 function displayInDom(data) {
   listsDom.innerHTML = "";
+  listsDom.innerHTML = `<div class="loader"></div>
+`;
   const toDoItems = data.map((todo) => {
     let isChecked = "";
     if (todo.completed) {
@@ -42,5 +44,7 @@ function displayInDom(data) {
          <button class="delete"> delete </button>
       </label>`;
   });
+  listsDom = document.querySelector(".todo-list");
+  listsDom.innerHTML = "";
   listsDom.innerHTML = toDoItems;
 }
