@@ -1,3 +1,5 @@
+import listenToUpdates from "./listentoupdates.js";
+
 let data = [];
 const listsDom = document.querySelector(".todo-list");
 export default function displayToDo() {
@@ -7,7 +9,8 @@ export default function displayToDo() {
       data = json.todos;
       console.log(data);
       displayInDom(data);
-    });
+    })
+    .then(() => listenToUpdates());
 }
 
 function displayInDom(data) {
@@ -27,6 +30,7 @@ function displayInDom(data) {
             <use xlink:href="#todo__circle" class="todo__circle"></use>
          </svg>
          <div class="todo__text">${todo.todo}</div>
+         <button class="delete"> delete </button>
       </label>`;
   });
   listsDom.innerHTML = toDoItems;

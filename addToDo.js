@@ -22,6 +22,6 @@ function postDataToApi(data) {
     .then((res) => res.json())
     .then((json) => {
       console.log(json);
-      displayToDo();
+      () => displayToDo();
     });
 }

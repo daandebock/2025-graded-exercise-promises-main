@@ -37,13 +37,13 @@ Your Todo App must include the following features:
   - `todo` (description)
   - `completed` (status)
 
-#### 2. **Add a Todo**
+#### 2. **Add a Todo** DONE
 
 - Allow users to add a new todo using a form.
 - Use the `POST /todos/add` endpoint.
 - Update the displayed list of todos after successfully adding a new item.
 
-#### 3. **Update a Todo**
+#### 3. **Update a Todo** DONE
 
 - Provide an option for users to mark a todo as "completed" or edit its description.
 - Use the `PUT /todos/{id}` endpoint.
