@@ -1,8 +1,8 @@
 import listenToUpdates from "./listentoupdates.js";
 
 let data = [];
-
 const listsDom = document.querySelector(".todo-list");
+
 export default function displayToDo() {
   let filter = document.querySelector("#completed").checked;
   fetch("https://dummyjson.com/todos")

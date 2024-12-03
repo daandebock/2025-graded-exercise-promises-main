@@ -8,5 +8,10 @@ export default function updateToDO(id, checked) {
     }),
   })
     .then((res) => res.json())
-    .then(() => displayToDo());
+    .then(
+      () =>
+        setTimeout(() => {
+          displayToDo();
+        }, "1000") // time out for the animation to load
+    );
 }

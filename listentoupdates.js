@@ -26,4 +26,6 @@ export default function listenToUpdates() {
     e.preventDefault();
     displayToDo();
   });
+
+  // listen to query search
 }
