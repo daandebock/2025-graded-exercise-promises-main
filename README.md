@@ -49,7 +49,7 @@ Your Todo App must include the following features:
 - Use the `PUT /todos/{id}` endpoint.
 - Update the UI to reflect changes.
 
-#### 4. **Delete a Todo**
+#### 4. **Delete a Todo** DONE
 
 - Allow users to delete a todo item.
 - Use the `DELETE /todos/{id}` endpoint.

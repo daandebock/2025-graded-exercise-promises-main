@@ -7,17 +7,34 @@
    <base href="/" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <script defer src="index.js" type="module"></script>
+   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
    <header>
+      <h2>Add To Do</h2>
       <form id="inputForm" action="">
-         <label for="input">Add your To Do</label>
-         <input type="text" id="input" name="input">
+         <label for="input">Add your To Do</label><br>
+         <input type="text" id="input" name="input"> <br>
+
+
          <input type="submit" value="Submit">
 
       </form>
+      <hr>
    </header>
+   <div class="filterbar">
+      <h2>filter To Do's</h2>
+      <form id="searchForm" action="">
+         <input type="checkbox" id="completed" name="completed" checked>
+         <label for="completed"> only completed tasks</label><br>
+
+         <label for="search">Search To Do</label>
+         <input type="search" id="search" name="search"> <br>
+         <input type="submit" value="filter">
+
+      </form>
+   </div>
    <svg viewBox="0 0 0 0" style="position: absolute; z-index: -1; opacity: 0;">
       <defs>
          <linearGradient id="boxGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="25" y2="25">
@@ -36,7 +53,7 @@
       </defs>
    </svg>
    <div class="todo-list">
-      <label class="todo">
+      <!-- <label class="todo">
          <input class="todo__state" type="checkbox" />
          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 25"
             class="todo__icon">
@@ -68,7 +85,7 @@
             <use xlink:href="#todo__circle" class="todo__circle"></use>
          </svg>
          <div class="todo__text">Not so important task</div>
-      </label>
+      </label> -->
    </div>
 </body>
 

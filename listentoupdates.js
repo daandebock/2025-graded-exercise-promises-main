@@ -1,5 +1,6 @@
 import deleteToDo from "./deletetodo.js";
 import updateToDO from "./updatatodo.js";
+import displayToDo from "./displaytodo.js";
 export default function listenToUpdates() {
   // listeners to checkbox updates
   const labels = document.querySelectorAll(".todo");
@@ -17,5 +18,12 @@ export default function listenToUpdates() {
         deleteToDo(e.currentTarget.id);
       }
     });
+  });
+
+  // listen to filter for completed task
+  const completedTaskCheckbox = document.querySelector("#completed");
+  completedTaskCheckbox.addEventListener("change", (e) => {
+    e.preventDefault();
+    displayToDo();
   });
 }

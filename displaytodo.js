@@ -1,14 +1,23 @@
 import listenToUpdates from "./listentoupdates.js";
 
 let data = [];
+
 const listsDom = document.querySelector(".todo-list");
 export default function displayToDo() {
+  let filter = document.querySelector("#completed").checked;
   fetch("https://dummyjson.com/todos")
     .then((res) => res.json())
     .then((json) => {
       data = json.todos;
       console.log(data);
-      displayInDom(data);
+      if (!filter) {
+        displayInDom(data);
+      } else {
+        const filteredData = data.filter((todo) => {
+          return todo.completed === true;
+        });
+        displayInDom(filteredData);
+      }
     })
     .then(() => listenToUpdates());
 }

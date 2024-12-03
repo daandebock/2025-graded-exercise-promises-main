@@ -1,5 +1,6 @@
 import displayToDo from "./displaytodo.js";
 const inputForm = document.querySelector("#inputForm");
+const userId = 5; // I have set this as an example
 export default function addToDo() {
   inputForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -16,7 +17,7 @@ function postDataToApi(data) {
     body: JSON.stringify({
       todo: `${data}`,
       completed: false,
-      userId: 5,
+      userId: userId,
     }),
   })
     .then((res) => res.json())
