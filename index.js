@@ -1,5 +1,7 @@
 // all imports
 import displayToDo from "./displaytodo.js";
+import addToDo from "./addToDo.js";
+
 setTimeout(function () {
   document
     .querySelector('input[type="checkbox"]')
@@ -8,5 +10,6 @@ setTimeout(function () {
 
 function init() {
   displayToDo();
+  addToDo();
 }
 init();
